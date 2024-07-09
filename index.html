@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute Selectors</title>
+</head>
+<style>
+    body{  
+        height: 97.5vh;
+        background: radial-gradient(circle at top left, lightblue,lightgreen,lightpink, lightyellow, rgb(222, 216, 104));
+        background-repeat: repeat-y;
+    }
+    [for]{
+        color: magenta;
+
+    }
+    [name=name]{
+        color: brown;
+    }
+    [title~=Details]{
+        border: 3px solid blue;
+        border-radius: 30px;
+    }
+    [class|=p]{
+        font-style: italic;
+        font-size: xx-large;
+        font-weight: bolder;
+    }
+    [id^=da]{
+        font-size: large;
+        color: rgb(255, 255, 255);
+        background-color: crimson;
+    }
+    [type$=il]{
+        color: blue;
+        border: 2px solid blue;
+        border-radius: 3px;
+    }
+    [type*=bm]{
+        background: linear-gradient(cyan,magenta);
+    }
+
+</style>
+<body>
+    <form action="">
+        <fieldset title="Personal Details"><!-- Used similar value and added color to the border -->
+            <legend class="p-details">Personal Details </legend><!-- used p value followed by (-) -->
+        <br><br>
+        <label for="name">First Name</label>
+        <input type="text" name="name" id="name">
+        <!-- Used for and changed font color -->
+        <br><br>
+        <label for="last">Last Name</label>
+        <input type="text" name="last" id="last">
+        <!-- used value name and changed the color that we input in the box  -->
+        <br><br>
+        <label for="date">Date of Birth</label>
+        <input type="date" name="date" id="date">
+        <!-- used starting letters and addedbackground color -->
+        <br><br>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email">
+        <!-- used ending letters of attribute selecctors and added styling to the input box -->
+        <br><br>
+        <label for="submit">Click submit button to Submit</label>
+        <input type="submit" value="Submit Here" id="submit">
+        <!-- Used container attribute selector and added gradient  effect -->
+        </fieldset>
+    </form>
+    
+</body>
+</html>
